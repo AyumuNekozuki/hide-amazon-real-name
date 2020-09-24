@@ -1,0 +1,111 @@
+
+div.hide-setting-but{
+  width: 50px !important;
+  display: inline-block;
+}
+
+div#hide-settings{
+  display: none;
+  position: absolute;
+  padding: .75rem;
+  border-radius: 5px;
+  border: 1px solid #bbb;
+  left: 600px;
+  z-index: 1000;
+  width: 250px;
+  height: 100px;
+  background: #FAFAFA;
+}
+div#hide-settings .switch__label {
+  width: 37px;
+  position: relative;
+  display: inline-block;
+  padding-top: 3px;
+}
+div#hide-settings .switch__content {
+  display: block;   
+  cursor: pointer;
+  position: relative;
+  border-radius: 7px;
+  height: 14px;
+  background-color:#000000;
+  -webkit-transition: all .1s .4s;
+    -moz-transition: all .1s .4s;
+      -ms-transition: all .1s .4s;
+      -o-transition: all .1s .4s;
+          transition: all .1s .4s;
+  overflow: hidden;
+}
+
+div#hide-settings .switch__content:after {
+  content: "";
+  display: block;
+  position: absolute;
+  
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  
+  border-radius: 7px;
+  -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+      -ms-transition: all .5s;
+      -o-transition: all .5s;
+          transition: all .5s;
+}
+div#hide-settings .switch__input {
+  display: none;
+}
+div#hide-settings .switch__circle {
+  display: block;
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
+  background-color: #F1F1F1;
+  -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+      -ms-transition: all .5s;
+      -o-transition: all .5s;
+          transition: all .5s;
+  -webkit-box-shadow: 0 2px 2px #ccc;
+          box-shadow: 0 2px 2px #ccc;
+}
+div#hide-settings .switch__input:checked ~ .switch__circle {
+  left: 18px;
+  background-color: #0078D7;
+}
+div#hide-settings .switch__input:checked ~ .switch__content {
+
+  border-color: transparent;
+  -webkit-transition: all 0s;
+    -moz-transition: all 0s;
+      -ms-transition: all 0s;
+      -o-transition: all 0s;
+          transition: all 0s;
+}
+
+div#hide-settings .switch__input:checked ~ .switch__content:after {
+  background-color: #0078D7;
+  width: 100%;
+}
+
+div#hide-settings .switch{
+  margin-bottom: 2.5rem;
+}
+div#hide-settings input{
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+}
+
+#hide-setting-but:hover{
+  cursor: default;
+}
+#hide-settings:hover{
+  display: block !important;
+}
